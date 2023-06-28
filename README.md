@@ -4,7 +4,7 @@
 ## 1. Definition Problem
 
 ## 2. Database Design
-This is the Relational Database used to create the models for the web application. [Database schema]()
+This is the Relational Database used to create the models for the web application. [Database schema](https://github.com/David-Angel-M/knowledge-society-api/blob/main/doc/DB_Post.jpg)
 
 ## 3. EndPoints
 
