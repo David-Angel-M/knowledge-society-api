@@ -15,9 +15,9 @@ This is the Relational Database used to create the models for the web applicatio
 /v1/post/
 
 ### Update Post
-/v1/post/<id>/
+/v1/post/id/
 
 ### Delete Post
-/v1/post-delete/<id>/
+/v1/post-delete/id/
 
 
