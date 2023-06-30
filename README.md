@@ -1,8 +1,7 @@
 
 # The Knowledge Society
 
-## 1. Definition Problem
-## Project Goals
+## 1. Project Goals
 The purpose of this project is to create a Django Rest Framework API for The Knowledge Society Web App. The design and creation of the API takes into consideration future compatibility for native app.
 
 The Knowledge Society book club is a web application to create an engaging platform where book lovers can share and comment their favorite books, fostering a vibrant community of avid readers. The application aims to provide a seamless and interactive experience for members to discover new books and expand their knowledge and literary horizons. By facilitating meaningful interactions and promoting a love for reading, The Knowledge Society aims to create a supportive and inclusive environment that encourages intellectual growth and fosters a lifelong passion for books.
@@ -19,38 +18,120 @@ Build distinct and customized models that cater to the specific needs and requir
 
 Construct an engaging Front-End application that utilizes data from an API, allowing users to interact with and manipulate the information in an interactive and meaningful manner.
 
+## 2. Technologies I've used
+Python was used to write the functions and models as needed by the business logic.
+Django Rest Framework was used to create the project and app’s functionality (Models, Serializers and Views).
 
+## 3. Database Design
+This is the Relational Database used to create the models for the web application. [Database schema]()
 
-## 2. Database Design
-This is the Relational Database used to create the models for the web application. [Database schema](https://github.com/David-Angel-M/knowledge-society-api/blob/main/doc/DB_Post.jpg)
+## 4. User stories
+###  4.1 Home
+As a site user, I want to be able to publish or update posts.
 
-## 3. Results
-[Link to the project]()
+###  4.2 Create Post
+As a site user, I want to be able to create a post to publish on the blog. 
 
-## 4. EndPoints
+###  4.3 Update Post
+As a site user, I want to be able to edit a post and make changes to its fields. 
 
-### Post List
-/v1/post-list/
+###  4.4 Delete Post
+As a site user, I want to be able to delete a post so that it no longer appears on the blog. 
 
-[Live link](http://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post-list/)
+## 5. API Reference
+[Link to the Api](https://knowledge-society-bc51a0144a7f.herokuapp.com/)
 
-[Link to the project](https://github.com/David-Angel-M/knowledge-society-api/blob/main/doc/PostList.JPG)
+#### Get all post
+```http
+  GET https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post-list/
+```
 
-### Create Post
-/v1/post/
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+|  `None`   | `Array`  | Get all post|
 
-[live link](http://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/)
+#### Create post
+```http
+  POST https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/
+```
 
-[Link to the project](https://github.com/David-Angel-M/knowledge-society-api/blob/main/doc/PostCreate.JPG)
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
 
-### View and Update Post
-/v1/post/id/
+{
+    "title": "string",
+    "description": "string",
+    "user": "string",
+    "category": "number"
+}
 
-[live link](http://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/1/)
+#### Get post
+```http
+  GET https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/${id}
+```
 
-[Link to the project](https://github.com/David-Angel-M/knowledge-society-api/blob/main/doc/PostDetail.JPG)
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
 
-### Delete Post
-/v1/post-delete/id/
-[Link to the project]()
+#### PUT post
+```http
+  PUT https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/${id}
+```
 
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+{
+    "title": "string",
+    "description": "string",
+    "category": "number"
+}
+
+#### DELETE post
+```http
+  DELETE https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+## 5. Testing
+### 5.1 API Endpoints Testing
+- I verify that all API endpoints are working correctly and returning the expected responses.
+- Each endpoint was tested with different HTTP methods (GET, POST, PUT, DELETE) to ensure proper functionality.
+- I check the appropriate status codes (e.g., 200 OK, 201 Created, 400 Bad Request, 404 Not Found) for different scenarios.
+
+### 5.2 Input Validation Testing
+- The input validation for all API endpoints corresponding with the fields of the models
+
+### 5.3 Data Integrity Testing
+- I verify the integrity of data stored in the database by performing CRUD (Create, Read, Update, Delete) operations through the API.
+- I checked that data is saved correctly, updated accurately, and deleted successfully.
+- I checked that data retrieval is returned for different scenarios.
+
+### Cross-Origin Resource Sharing (CORS) Testing:
+- I verified that the appropriate CORS headers are included in API responses.
+
+## 5. Deployment
+The site was deployed using Heroku, by following the steps found in the tutorials and guidelines of CodeInstitute’s material:
+
+Using my Heroku account
+Create a new app whilst logged in
+Connect my GitHub repository via "Connect to GitHub" option in Heroku
+Set up the config vars for the project.
+Enable either "Automatic Deploy"
+
+## 6. Credits and references
+- Stackoverflow.
+- Student Care.
+- Slack Community.
+- W3Schools.
+- Family and Friends.
+
+## 7. Acknowledgements
+This API was created for my PP5 Project for the Full Stack Developer program with Code Institute.
+DAVID ANGEL, 2022/2023
