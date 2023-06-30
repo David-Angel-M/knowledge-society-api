@@ -23,7 +23,7 @@ Construct an engaging Front-End application that utilizes data from an API, allo
 - Django Rest Framework was used to create the project and app’s functionality (Models, Serializers and Views).
 
 ## 3. Database Design
-This is the Relational Database used to create the models for the web application. [Database schema]()
+This is the Relational Database used to create the models for the web application. [Database schema](https://github.com/David-Angel-M/knowledge-society-api/blob/main/doc/DB_Post.jpg)
 
 ## 4. User stories
 ###  4.1 Home
@@ -92,7 +92,7 @@ As a site user, I want to be able to delete a post so that it no longer appears 
 
 #### DELETE post
 ```http
-  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/${id}
+  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post-delete/${id}
 ```
 
 | Parameter | Type     | Description                       |
