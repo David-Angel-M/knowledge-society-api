@@ -19,8 +19,8 @@ Build distinct and customized models that cater to the specific needs and requir
 Construct an engaging Front-End application that utilizes data from an API, allowing users to interact with and manipulate the information in an interactive and meaningful manner.
 
 ## 2. Technologies I've used
-Python was used to write the functions and models as needed by the business logic.
-Django Rest Framework was used to create the project and app’s functionality (Models, Serializers and Views).
+- Python was used to write the functions and models as needed by the business logic.
+- Django Rest Framework was used to create the project and app’s functionality (Models, Serializers and Views).
 
 ## 3. Database Design
 This is the Relational Database used to create the models for the web application. [Database schema]()
@@ -41,18 +41,18 @@ As a site user, I want to be able to delete a post so that it no longer appears 
 ## 5. API Reference
 [Link to the Api](https://knowledge-society-bc51a0144a7f.herokuapp.com/)
 
-#### Get all post
+#### GET all post
 ```http
-  GET https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post-list/
+   https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post-list/
 ```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 |  `None`   | `Array`  | Get all post|
 
-#### Create post
+#### POST Create
 ```http
-  POST https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/
+  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/
 ```
 
 | Parameter | Type     | Description                       |
@@ -66,18 +66,18 @@ As a site user, I want to be able to delete a post so that it no longer appears 
     "category": "number"
 }
 
-#### Get post
+#### GET Detail post
 ```http
-  GET https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/${id}
+  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/${id}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of item to fetch |
 
-#### PUT post
+#### PUT Detail post
 ```http
-  PUT https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/${id}
+  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/${id}
 ```
 
 | Parameter | Type     | Description                       |
@@ -92,46 +92,46 @@ As a site user, I want to be able to delete a post so that it no longer appears 
 
 #### DELETE post
 ```http
-  DELETE https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/${id}
+  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/${id}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of item to fetch |
 
-## 5. Testing
-### 5.1 API Endpoints Testing
+## 6. Testing
+### 6.1 API Endpoints Testing
 - I verify that all API endpoints are working correctly and returning the expected responses.
 - Each endpoint was tested with different HTTP methods (GET, POST, PUT, DELETE) to ensure proper functionality.
 - I check the appropriate status codes (e.g., 200 OK, 201 Created, 400 Bad Request, 404 Not Found) for different scenarios.
 
-### 5.2 Input Validation Testing
+### 6.2 Input Validation Testing
 - The input validation for all API endpoints corresponding with the fields of the models
 
-### 5.3 Data Integrity Testing
+### 6.3 Data Integrity Testing
 - I verify the integrity of data stored in the database by performing CRUD (Create, Read, Update, Delete) operations through the API.
 - I checked that data is saved correctly, updated accurately, and deleted successfully.
 - I checked that data retrieval is returned for different scenarios.
 
-### Cross-Origin Resource Sharing (CORS) Testing:
+### 6.4 Cross-Origin Resource Sharing (CORS) Testing:
 - I verified that the appropriate CORS headers are included in API responses.
 
-## 5. Deployment
+## 7. Deployment
 The site was deployed using Heroku, by following the steps found in the tutorials and guidelines of CodeInstitute’s material:
 
-Using my Heroku account
-Create a new app whilst logged in
-Connect my GitHub repository via "Connect to GitHub" option in Heroku
-Set up the config vars for the project.
-Enable either "Automatic Deploy"
+- Using my Heroku account
+- Create a new app whilst logged in
+- Connect my GitHub repository via "Connect to GitHub" option in Heroku
+- Set up the config vars for the project.
+- Enable either "Automatic Deploy"
 
-## 6. Credits and references
+## 8. Credits and references
 - Stackoverflow.
 - Student Care.
 - Slack Community.
 - W3Schools.
 - Family and Friends.
 
-## 7. Acknowledgements
+## 9. Acknowledgements
 This API was created for my PP5 Project for the Full Stack Developer program with Code Institute.
 DAVID ANGEL, 2022/2023
