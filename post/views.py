@@ -1,11 +1,13 @@
 from rest_framework.generics import ListAPIView, DestroyAPIView, CreateAPIView, RetrieveUpdateAPIView
-from .serializers import PostListSerializer, PostSerializer
-from .models import Post
+from .serializers import PostListSerializer, PostSerializer, CategoryListSerializer
+from .models import Post, Category
+
 
 class PostListProv(ListAPIView):
     queryset = Post.objects.all()
     serializer_class = PostListSerializer
     permission_classes = ()
+
 
 class PostCreate(CreateAPIView):
     serializer_class = PostSerializer
@@ -13,8 +15,8 @@ class PostCreate(CreateAPIView):
 
 
 class PostDetailProv(RetrieveUpdateAPIView):
-    serializer_class = PostSerializer  
-    queryset = Post.objects.all()  
+    serializer_class = PostSerializer
+    queryset = Post.objects.all()
     permission_classes = ()
     lookup_field = 'id'
 
@@ -24,3 +26,9 @@ class PostDeleteProv(DestroyAPIView):
     queryset = Post.objects.all()
     permission_classes = ()
     lookup_field = 'id'
+
+
+class CategoryList(ListAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategoryListSerializer
+    permission_classes = ()
