@@ -7,22 +7,20 @@ class PostListSerializer(serializers.ModelSerializer):
         model = Post
         fields = '__all__'
 
-
-class PostSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Post
-        fields = '__all__'
-
-"""     def to_representation(self, instance):
+    def to_representation(self, instance):
         return {
             'id': instance.id,
             'title': instance.title,
             'description': instance.description,
             'created': instance.created,
-            'user': instance.user.id,
-            'category': instance.category.id,
-            'category_name': instance.category.name,
-        } """
+            'category':instance.category.name
+        }
+
+
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = '__all__'
 
 class CategoryListSerializer(serializers.ModelSerializer):
     class Meta():
