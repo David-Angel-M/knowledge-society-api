@@ -59,7 +59,7 @@ As a site user, I want to be able to delete a post so that it no longer appears 
 | :-------- | :------- | :------------------------- |
 |  `None`   | `Array`  | Get all categories         |
 
-#### POST Create Private
+#### POST Create Post Private
 ```http
   https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/affiliate/posts/
 ```
@@ -75,7 +75,7 @@ As a site user, I want to be able to delete a post so that it no longer appears 
     "category": "number"
 }
 
-#### GET Detail post Private
+#### GET Detail Post Private
 ```http
   https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/affiliate/posts/${id}
 ```
@@ -84,7 +84,7 @@ As a site user, I want to be able to delete a post so that it no longer appears 
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of item to fetch |
 
-#### PUT Detail post Private
+#### PUT Detail Post Private
 ```http
   https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/affiliate/posts/${id}
 ```
@@ -99,7 +99,7 @@ As a site user, I want to be able to delete a post so that it no longer appears 
     "category": "number"
 }
 
-#### DELETE post Private
+#### DELETE Post Private
 ```http
   https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/affiliate/post-delete/${id}
 ```
