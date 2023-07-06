@@ -50,7 +50,7 @@ As a site user, I want to be able to delete a post so that it no longer appears 
 | :-------- | :------- | :------------------------- |
 |  `None`   | `Array`  | Get all post|
 
-#### GET all categories Public
+#### GET all Categories Public
 ```http
    https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/category-list/
 ```
