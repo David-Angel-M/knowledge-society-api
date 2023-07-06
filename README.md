@@ -41,7 +41,7 @@ As a site user, I want to be able to delete a post so that it no longer appears 
 ## 5. API Reference
 [Link to the Api](https://knowledge-society-bc51a0144a7f.herokuapp.com/)
 
-#### GET all post Public
+#### GET all Post Public
 ```http
    https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/posts-list/
 ```
