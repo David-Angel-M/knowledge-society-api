@@ -43,7 +43,7 @@ As a site user, I want to be able to delete a post so that it no longer appears 
 
 #### GET all post
 ```http
-   https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post-list/
+   https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/posts-list/
 ```
 
 | Parameter | Type     | Description                |
