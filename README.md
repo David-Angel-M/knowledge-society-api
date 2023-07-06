@@ -29,19 +29,19 @@ This is the Relational Database used to create the models for the web applicatio
 ###  4.1 Home
 As a site user, I want to be able to publish or update posts.
 
-###  4.2 Create Post
+###  4.2 Create Post Private 
 As a site user, I want to be able to create a post to publish on the blog. 
 
-###  4.3 Update Post
+###  4.3 Update Post Private 
 As a site user, I want to be able to edit a post and make changes to its fields. 
 
-###  4.4 Delete Post
+###  4.4 Delete Post Private 
 As a site user, I want to be able to delete a post so that it no longer appears on the blog. 
 
 ## 5. API Reference
 [Link to the Api](https://knowledge-society-bc51a0144a7f.herokuapp.com/)
 
-#### GET all post
+#### GET all post Public
 ```http
    https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/posts-list/
 ```
@@ -50,7 +50,7 @@ As a site user, I want to be able to delete a post so that it no longer appears 
 | :-------- | :------- | :------------------------- |
 |  `None`   | `Array`  | Get all post|
 
-#### GET all categories
+#### GET all categories Public
 ```http
    https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/category-list/
 ```
@@ -59,9 +59,9 @@ As a site user, I want to be able to delete a post so that it no longer appears 
 | :-------- | :------- | :------------------------- |
 |  `None`   | `Array`  | Get all categories         |
 
-#### POST Create
+#### POST Create Private
 ```http
-  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/
+  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/affiliate/posts/
 ```
 
 | Parameter | Type     | Description                       |
@@ -75,18 +75,18 @@ As a site user, I want to be able to delete a post so that it no longer appears 
     "category": "number"
 }
 
-#### GET Detail post
+#### GET Detail post Private
 ```http
-  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/${id}
+  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/affiliate/posts/${id}
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of item to fetch |
 
-#### PUT Detail post
+#### PUT Detail post Private
 ```http
-  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post/${id}
+  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/affiliate/posts/${id}
 ```
 
 | Parameter | Type     | Description                       |
@@ -99,9 +99,9 @@ As a site user, I want to be able to delete a post so that it no longer appears 
     "category": "number"
 }
 
-#### DELETE post
+#### DELETE post Private
 ```http
-  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/post-delete/${id}
+  https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/affiliate/post-delete/${id}
 ```
 
 | Parameter | Type     | Description                       |
