@@ -29,13 +29,19 @@ This is the Relational Database used to create the models for the web applicatio
 ###  4.1 Home
 As a site user, I want to be able to publish or update posts.
 
-###  4.2 Create Post Private 
+###  4.2 Register
+As a site user, I want to be able to register on the application in order to publish or update posts. 
+
+###  4.3 Login
+As a As a site register user, I want to be able to log in to the application in order to publish or update posts.
+
+###  4.4 Create Post Private 
 As a site user, I want to be able to create a post to publish on the blog. 
 
-###  4.3 Update Post Private 
+###  4.5 Update Post Private 
 As a site user, I want to be able to edit a post and make changes to its fields. 
 
-###  4.4 Delete Post Private 
+###  4.6 Delete Post Private 
 As a site user, I want to be able to delete a post so that it no longer appears on the blog. 
 
 ## 5. API Reference
@@ -50,14 +56,33 @@ As a site user, I want to be able to delete a post so that it no longer appears 
 | :-------- | :------- | :------------------------- |
 |  `None`   | `Array`  | Get all post|
 
-#### GET all Categories Public
+#### POST Register Public
 ```http
-   https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/category-list/
+   https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/affiliate/provider/signup/
 ```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-|  `None`   | `Array`  | Get all categories         |
+|  `None`   | `Array`  | Create user in the app     |
+
+{
+    "email": "",
+    "password": ""
+}
+
+#### POST Login Public
+```http
+   https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/affiliate/login/
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+|  `None`   | `Array`  | Login in in the app        |
+
+{
+    "email": "",
+    "password": ""
+}
 
 #### POST Create Post Private
 ```http
