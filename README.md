@@ -56,28 +56,28 @@ As a site user, I want to be able to delete a post so that it no longer appears 
 | :-------- | :------- | :------------------------- |
 |  `None`   | `Array`  | Get all post|
 
-#### POST Register Public
+#### POST Create User Public
 ```http
    https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/affiliate/provider/signup/
 ```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-|  `None`   | `Array`  | Create user in the app     |
+|  `None`   | `Array`  | **Required**. Email and password |
 
 {
     "email": "",
     "password": ""
 }
 
-#### POST Login Public
+#### POST Login User Public
 ```http
    https://knowledge-society-bc51a0144a7f.herokuapp.com/v1/affiliate/login/
 ```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-|  `None`   | `Array`  | Login in in the app        |
+|  `None`   | `Array`  | **Required**. Email and password |
 
 {
     "email": "",
