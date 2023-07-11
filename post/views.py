@@ -75,10 +75,11 @@ class PostDetailProv(APIView):
         return False
 
 
-class PostDeleteProv(DestroyAPIView):
+class PostDeleteProv(DestroyAPIView):  
+    permission_classes = (IsAuthenticated,)
+    authentication_classes = (JWTAuthentication,)
     serializer_class = PostSerializer
     queryset = Post.objects.all()
-    permission_classes = ()
     lookup_field = 'id'
 
 
