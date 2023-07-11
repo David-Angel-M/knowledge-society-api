@@ -21,6 +21,7 @@ Construct an engaging Front-End application that utilizes data from an API, allo
 ## 2. Technologies I've used
 - Python was used to write the functions and models as needed by the business logic.
 - Django Rest Framework was used to create the project and app’s functionality (Models, Serializers and Views).
+- Simple JWT provides a JSON Web Token authentication backend for the Django REST Framework.
 
 ## 3. Database Design
 This is the Relational Database used to create the models for the web application. [Database schema](https://github.com/David-Angel-M/knowledge-society-api/blob/main/doc/DB_Post.jpg)
